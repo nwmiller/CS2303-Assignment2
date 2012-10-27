@@ -1,0 +1,76 @@
+Nathaniel Miller
+nwmiller@wpi.edu
+
+Assigment #2 readme:
+
+Note: This file will be broken into sections corresponding to the different parts of the assignment in order to optimize organization.
+
+Part 1:
+	Program Description:
+		This program (code located in files at.c and print_arrays.c) creates 		an array of ten consecutive integers, as well as an array of ten consecutive 		doubles, and then call print functions (one for printing an array of ints, the 		other for printing an array of doubles). When the function is called (./at in 		Terminal), ten consecutive integers as well as ten consecutive doubles are 		printed out to the user. Each set of values is labeled appropriately on-screen.
+		
+		Cautions & Notes: N/A
+
+Part 2:
+	Program Description:
+		This program (code located in files at2.c and print_arrays.c) prompts
+	and reads in user entered values and stores them into an array. The user can
+	enter up to 10 values, to to end early can enter a negative number. Valid user
+	are values between 0 and 100. If the user enters a value over 100, and error 
+	message is printed. When the function is called (./at2 in Terminal) and the user 		enters all ten values, or ends the input process, the values entered are printed 		out to the user in the order they were entered. This output is labeled
+	accordingly.
+		
+		Cautions & Notes:
+			-WARNING:Input other than integers (such as characters) are not
+				handled/accepted in this program. If entered, the 					program will infinitely loop.
+			-Grades over 100 are not accepted. If entered, and error
+				message will be printed and grade input will continue.
+			-If no grades are entered (as in a negative # is entered as 					the first input) then an error message is printed.
+				The program must be run again.
+
+Part 3:
+	Program Description:
+		The function written for this part sorts an array of integers into 		ascending order, using the bubble sort algorithm. This function, called sortArr,
+	is located in file rand_sort.c, and has the capability of sorting an array of any
+	size. For the purposes of this assignment, a defined array size of 10 was used
+	because of its use in Part 2--however, any size array would work as the size is
+	passed as a parameter to the function (in the function call in at2.c). The array 		is sorted in place and ends up in the same array as the unsorted values.
+		
+		Cautions & Notes:
+			-This part uses Part 2 to demonstrate, so when ./at2 is called
+				in Terminal and the user enters values. Once the input
+				phase is ended, the values are printed out unsorted,
+				and also printed out sorted in ascending order. Both sets
+				of output are labeled accordingly.
+			-The catuions and notes for Part 2 apply when running ./at2.
+
+Part 4:
+	Program Description:
+		This prorgam's purpose is to generate random integers, fill an array with
+	those randomly generated integers untill full, print that array, then sort the   		array, and finally print the sorted array of random integers. The main program 		code is located in file at3.c, and the functions for generating a random int and 		filling the array are in rand_sort.c. When the program is called (./at3 in 		Terminal), the array of ten (the size of the array is a defined constant, so it
+	can easily be changed) randomly generated integers are printed out, and
+	that array sorted in ascending order is also printed out. Each set is labeled
+	accordingly. Each time the program is run, a new set of random integers is 		generated. For this assignment, the range used for the generator is from 0 to a
+	maximum (defined in at3.c)--for the purposes of this assignment that max was
+	defined as 15. However, any maximum would work, and the defined constant could
+	easily be changed to increase or decrease that maximum.
+		
+		Cautions & Notes: N/A
+
+Instructions:
+	1. Create directory for all assigment files. Or use an existing directory.
+	2. Copy or move all source files, including headers, makefile, and Doxyfile to 			created or existing directory.
+	3. In Terminal travel to directory that the files were copied or moved into.
+	4. Use the "make" (without quotes) command in Terminal in order to both 		compile all the .c files into .o files and to link them into the 			respective executables with their proper dependcies. See the makefile
+		for more detail.
+	5. To run the programs, use the following commands in Terminal:
+		Part 1: ./at
+		Part 2 & 3: ./at2
+		Part 4: ./at3 
+	6. To generate HTML files for the program and code documentation,
+		simply use the "make docs" (without quotes) command in Terminal.
+		This will generate all the necessary HTML files and copy them to the
+		public_html (make sure a directory "assig2" is in the public_html 			folder) folder. The HTML files should then be viewable online.
+	
+		
+
